@@ -1,0 +1,18 @@
+{
+  "navbar": {
+  "home": "Esileht",
+  "services": "Teenused",
+  "construction": "Ehitamine",
+  "repair": "Remont",
+  "consultations": "Nõustamine",
+  "gallery": "Galerii",
+  "price": "Hind",
+  "contacts": "Kontakt",
+  "offer": "Küsi pakkumine"
+},
+  "header":{
+    "header_title": "Kas ehitate midagi?",
+    "header_description": " - professionaalide meeskond, kes aitab teil realiseerida teie soovid terrassi, kuuri või aiatööriistade maja ehitamisel.",
+    "header_button": "Palgake meid"
+  }
+}

@@ -1,0 +1,90 @@
+.footerContainer{
+    display: flex;
+    justify-content: center;
+    padding: 3.75rem 8rem 2rem 3.75rem;
+    background-color: #212121;
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*bottom: 0;*/
+
+}
+
+.footerWrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    width: 100%;
+}
+
+.companyVision{
+    display: flex;
+    flex-direction: column;
+}
+.companyName{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+.companyText{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    max-width: 282px;
+    width: 100%;
+}
+.quickLinksTitle, .contactTitle{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.footerLinks, .contactLinks{
+    list-style: none;
+    margin-top: 1rem;
+}
+.footerLinks li a{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+.contactLinks li{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 8px;
+}
+
+@media screen and (max-width: 480px){
+    .footerWrapper{
+        flex-direction: column;
+    }
+    .footerContainer{
+        padding: 1rem;
+    }
+    .companyQuickLinks, .companyContact{
+        margin-top: 2.5rem;
+    }
+    .footerLinks{
+        margin-left: 2rem;
+    }
+    .footerLinks li:before{
+        content: "\2022";
+        margin-left: -1em;
+        width: 1em;
+        display: inline-block;
+        font-weight: bold;
+        color: #FFFFFF;
+    }
+}

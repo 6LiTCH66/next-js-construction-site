@@ -1,0 +1,208 @@
+.navbarBox{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 3px 1px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px 80px;
+    position: relative;
+    z-index: 10;
+}
+.navbarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.98);
+    max-width: 1280px;
+    width: 100%;
+}
+
+.navbarLogo span{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 5px;
+
+
+    letter-spacing: 0.5px;
+    color: var(--color-green-dark);
+}
+
+.navbarLinksContainer{
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.navbarLinksContainer .navbarLinksWrapper li a{
+    text-decoration: none;
+    color: var(--color-light-black);
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+}
+.navbarLinksContainer .navbarLinksWrapper li a:hover{
+    color: black;
+}
+
+.nav__listitem {
+    margin: 0.5rem 1.5rem;
+}
+.linkButton a{
+    text-decoration: none;
+    color: var(--color-button-text);
+}
+
+.linkButton{
+    background-color: var(--color-green-dark);
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dropdown{
+    position: relative;
+    margin: 0 !important;
+    padding: 0.5rem 1.5rem;
+}
+.dropdown a{
+    gap: 5px;
+}
+
+.dropdown:hover ul, .dropdown:focus ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav__listitemdrop {
+    z-index: 10;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    top: 2rem;
+
+    background-color: white;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease-in-out;
+}
+
+.nav__listitemdrop li {
+    margin: 0 !important;
+    list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    transition: background-color 200ms ease-in-out;
+    cursor: pointer;
+}
+.nav__listitemdrop li:hover, .nav__listitemdrop li:focus {
+    background-color: var(--color-green-dark);
+}
+.nav__listitemdrop li:hover a, .nav__listitemdrop li a:hover {
+    color: #FFFFFF !important;
+}
+.nav__listitem{
+    position: relative;
+}
+
+.nav__listitem::after, .dropdown::after {
+    content: "";
+    width: 0;
+    height: 0.23rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    background-color: var(--color-green-dark);
+    transition: width 200ms ease-in;
+}
+
+.dropdown:hover::after, .dropdown:focus::after {
+    width: 60% !important;
+}
+
+.nav__listitem:hover::after, .nav__listitem:focus::after {
+    width: 100%;
+}
+
+.headerMobileMenuBlackout{
+    opacity: .76;
+}
+
+.headerMobileMenuBlackout{
+    height: 100vh;
+    background-color: #000000;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 0;
+
+}
+.navbarLogo a{
+    text-decoration: none;
+}
+.language:hover::after, .language:focus::after {
+    width: 0 !important;
+}
+
+/*.language_dropdown li:hover, .language_dropdown li:focus{*/
+/*    background-color: #FFFFFF!important;*/
+/*}*/
+/*.language_dropdown li:hover a, .language_dropdown li:focus a{*/
+/*    color: black!important;*/
+/*}*/
+/*.language_dropdown li {*/
+/*    padding: 0!important;*/
+/*}*/
+
+
+
+@media screen and (max-width: 480px) {
+    .navbarBox{
+        padding: 2rem;
+    }
+    .nav__listitem{
+        width: 100%;
+        margin: 0 !important;
+    }
+    .nav__listitem a{
+        padding: 1rem;
+    }
+    .nav__listitem:hover::after, .nav__listitem:focus::after,
+    .dropdown:hover::after, .dropdown:focus::after {
+        width: 0 !important;
+    }
+    .nav__listitemdrop{
+        position: static;
+        display: none;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0 1rem 0 2rem;
+        /*padding-bottom: 0;*/
+        /*background-color: red;*/
+
+    }
+    .dropdown:hover ul, .dropdown:focus ul {
+        display: block;
+    }
+    .nav__listitemdrop li {
+        padding: 0!important;
+    }
+    .dropdown{
+        padding: 0;
+    }
+    .linkButton{
+        margin-top: 2rem;
+    }
+
+}
