@@ -9,10 +9,29 @@
   "price": "Hind",
   "contacts": "Kontakt",
   "offer": "Küsi pakkumine"
-},
+  },
   "header":{
     "header_title": "Kas ehitate midagi?",
     "header_description": " - professionaalide meeskond, kes aitab teil realiseerida teie soovid terrassi, kuuri või aiatööriistade maja ehitamisel.",
     "header_button": "Tellimisavaldus"
+  },
+  "our_services":{
+    "title": "Meie teenused",
+    "description": "Meie ettevõte pakub laia valikut ehitusteenuseid klientidele, kes soovivad teostada ehitus- või renoveerimistöid.",
+    "button_text": "Vaata rohkem",
+    "construction": {
+      "title": "Ehitus",
+      "description": "Teenust osutame terrasside, kuuride, pergolate, kõrvalhoonete, puukuuride - kuuride ehituseks ja soojapeenarde korrastamiseks."
+    },
+
+    "repair": {
+      "title": "Remont",
+      "description": "Meie ettevõte pakub professionaalset teenust põrandate, puitfassaadide ja terrasside remondiks ja restaureerimiseks."
+    },
+
+    "consultation":{
+      "title": "Nõustamine",
+      "description":  "Meil on hea meel pakkuda teile tasuta konsultatsiooni. Meie eksperdid on valmis teid aitama mis tahes probleemi lahendamisel. Esitage küsimusi ja saage kvaliteetseid vastuseid."
+    }
   }
 }

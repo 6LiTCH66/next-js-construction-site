@@ -5,17 +5,15 @@ import repair_work from "../../public/assets/repair.jpg"
 import consultation from "../../public/assets/consultation.jpg"
 import styles from "@/styles/OurService.module.css"
 
-export default function OurServices(){
+export default function OurServices({our_services_object}){
     return (
         <div className={styles.servicesContainer}>
             <div className={styles.servicesContentHeader}>
                 <span className={styles.servicesContentTitle}>
-                    Наши услуги
-                    {/*{ru.our_services.title}*/}
+                    {our_services_object.title}
                 </span>
                 <span className={styles.servicesContentDescription}>
-                    Наша компания предлагает широкий спектр строительных услуг для клиентов, желающих провести строительные или ремонтные работы.
-                    {/*{ru.our_services.description}*/}
+                    {our_services_object.description}
                 </span>
 
             </div>
@@ -34,16 +32,13 @@ export default function OurServices(){
                     </div>
                     <div className={styles.servicesContentWrapperContent}>
                         <span className={styles.servicesContentWrapperTitle}>
-                            Строительство
-                            {/*{ru.our_services.construction.title}*/}
+                            {our_services_object.construction.title}
                         </span>
                         <span className={styles.servicesContentWrapperDescription}>
-                            Мы предоставляем услуги по строительству терасс, навесов, перголы, пристроек, дровников - сараев и устройство тёплых грядок.
-                            {/*{ru.our_services.construction.description}*/}
+                            {our_services_object.construction.description}
                         </span>
                         <Link href="/terrace-construction" className={styles.servicesContentButton}>
-                            Узнать больше
-                            {/*{ru.our_services.button_text}*/}
+                            {our_services_object.button_text}
                         </Link>
                     </div>
                 </div>
@@ -62,16 +57,13 @@ export default function OurServices(){
                     </div>
                     <div className={styles.servicesContentWrapperContent}>
                         <span className={styles.servicesContentWrapperTitle}>
-                            Ремонт
-                            {/*{ru.our_services.repair.title}*/}
+                            {our_services_object.repair.title}
                         </span>
                         <span className={styles.servicesContentWrapperDescription}>
-                            Наша компания предлагает профессиональные услуги по ремонту и реставрации полов, деревянных фасадов и террас.
-                            {/*{ru.our_services.repair.description}*/}
+                            {our_services_object.repair.description}
                         </span>
                         <Link href="floor-resurfacing" className={styles.servicesContentButton}>
-                            Узнать больше
-                            {/*{ru.our_services.button_text}*/}
+                            {our_services_object.button_text}
                         </Link>
                     </div>
                 </div>
@@ -89,16 +81,13 @@ export default function OurServices(){
                     </div>
                     <div className={styles.servicesContentWrapperContent}>
                         <span className={styles.servicesContentWrapperTitle}>
-                            Консультация
-                            {/*{ru.our_services.consultation.title}*/}
+                            {our_services_object.consultation.title}
                         </span>
                         <span className={styles.servicesContentWrapperDescription}>
-                            С удовольствием предоставляем Вам бесплатную консультацию. Наши специалисты готовы помочь Вам с решением любой проблемы. Задавайте вопросы и получайте качественные ответы.
-                            {/*{ru.our_services.consultation.description}*/}
+                            {our_services_object.consultation.description}
                         </span>
                         <Link href="consultation" className={styles.servicesContentButton}>
-                            Узнать больше
-                            {/*{ru.our_services.button_text}*/}
+                            {our_services_object.button_text}
                         </Link>
                     </div>
                 </div>

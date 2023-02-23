@@ -16,7 +16,7 @@ export default function Home() {
           header_description={t("header.header_description")}
           header_button={t("header.header_button")}
       />
-        <OurServices/>
+        <OurServices our_services_object={t("our_services", { returnObjects: true})}/>
 
     </>
   )
