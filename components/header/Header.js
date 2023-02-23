@@ -2,6 +2,7 @@ import header_image from "../../public/assets/header-vector.svg"
 import Link from "next/link"
 import Image from "next/image"
 import styles from '@/styles/Header.module.css'
+import ReactCountryFlag from "react-country-flag"
 
 function Header({header_title, header_description, header_button}) {
 

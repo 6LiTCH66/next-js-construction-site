@@ -4,6 +4,7 @@ import styles from '@/styles/Home.module.css'
 import Header from "../../components/header/Header";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
+import OurServices from "../../components/our_services/OurServices";
 
 export default function Home() {
     const { t } = useTranslation()
@@ -15,6 +16,7 @@ export default function Home() {
           header_description={t("header.header_description")}
           header_button={t("header.header_button")}
       />
+        <OurServices/>
 
     </>
   )

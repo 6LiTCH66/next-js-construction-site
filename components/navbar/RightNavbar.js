@@ -5,7 +5,6 @@ import Link from "next/link"
 import styles from "@/styles/Navbar.module.css"
 import {useRouter} from "next/router";
 
-
 const Ul = styled.ul`
   list-style: none;
   display: flex;
@@ -42,7 +41,7 @@ export default function RightNavbar(props) {
     const otherLocales = locales?.filter(
         (locale) => locale !== activeLocale
     );
-    console.log(otherLocales)
+    // console.log(otherLocales)
 
     return (
         <Ul open={props.open}>
@@ -81,30 +80,18 @@ export default function RightNavbar(props) {
                 <Link href="/offer">{props.navbar_text.offer}</Link>
             </div>
             <li className={`${styles.dropdown} ${styles.nav__listitem} ${styles.language}`}>
-                {/*<Link href="/">*/}
-                {/*    Русский*/}
-                {/*    <IoIosArrowDown size={13}/>*/}
-                {/*</Link>*/}
                 {otherLocales?.map((locale) => {
                     const { pathname, query, asPath } = router;
 
                     return(
                         <span key={"locale-" + locale}>
                             <Link href={{ pathname, query }} as={asPath} locale={locale}>
+
                                     {locale === "ru" ? "Русский" : locale === "ee" ? "Eesti" : null}
                             </Link>
                         </span>
                     )
                 })}
-
-                {/*<ul className={`${styles.nav__listitemdrop} ${styles.language_dropdown}`}>*/}
-                {/*    <li>*/}
-                {/*        <Link href="/">Русский</Link>*/}
-                {/*    </li>*/}
-                {/*    <li>*/}
-                {/*        <Link href="/">Eesti</Link>*/}
-                {/*    </li>*/}
-                {/*</ul>*/}
             </li>
 
         </Ul>
