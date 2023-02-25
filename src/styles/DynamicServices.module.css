@@ -1,0 +1,142 @@
+.constructionHeader{
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("../../public/assets/hero-background.jpg") no-repeat;
+    padding: 3.75rem 8rem;
+    background-size: cover;
+    background-position: 50% 50%;
+
+
+}
+.constructionContainer{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 0 8rem;
+}
+
+.constructionHeaderWrapper{
+    width: 100%;
+    max-width: 500px;
+}
+.constructionHeaderTitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+.constructionHeaderDescription{
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    height: 100%;
+    min-height: 75px;
+}
+.constructionHeaderWrapper hr{
+    border: 1px solid #FFFFFF;
+}
+
+
+.constructionWrapper{
+
+    display: flex;
+    max-width: 1440px;
+    width: 100%;
+}
+.workTypesTitle{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--color-black);
+}
+.workTypesContainer{
+
+    background-color: #F5F4F5;
+    padding: 1.875rem 0 1.875rem 1.688rem;
+    margin-right: 3.5rem;
+    max-width: 376px;
+    width: 100%;
+    height: fit-content;
+}
+.workTypes li a{
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+    color: var(--color-green-dark);
+}
+
+.workTypes{
+    margin-top: 1rem;
+    list-style: none;
+}
+
+.workInfoTitle{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 30px;
+    color: var(--color-black);
+    margin-bottom: 0.5rem;
+}
+
+.workInfoContainer{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.workInfoText{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.workInfoContainer ul{
+    list-style-type: square;
+}
+.workInfoContainer ul li {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+#workDescription{
+    padding: 2.5rem 0;
+}
+@media screen and (max-width: 768px){
+    .workInfoTitle{
+        font-size: 1.5rem;
+    }
+    .constructionHeader{
+        padding: 2rem;
+    }
+
+    .constructionContainer{
+        padding: 2rem;
+
+    }
+    .constructionWrapper{
+        flex-direction: column;
+
+    }
+    .workTypesContainer{
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 480px){
+    .constructionHeader{
+        padding: 1rem;
+    }
+    .constructionHeaderTitle{
+        font-size: 24px;
+    }
+    .constructionHeaderDescription{
+        font-size: 13px;
+        line-height: 1.2rem;
+    }
+}

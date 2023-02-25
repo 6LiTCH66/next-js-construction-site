@@ -11,7 +11,6 @@ import ContactForm from "../../components/contact_form/ContactForm";
 
 export default function Home() {
     const { t } = useTranslation()
-    // console.log(t("contact_form", {returnObjects: true}).contact_info)
   return (
     <>
       <Header
@@ -24,7 +23,7 @@ export default function Home() {
             project_title={t("our_projects.title")}
             projects_button={t("our_projects.button_title")}
         />
-        <ContactForm contact_object={t("contact_form", {returnObjects: true})}/>
+        <ContactForm contact_object={t("contact_form", {returnObjects: true})} display_select_menu={true}/>
 
     </>
   )

@@ -14,7 +14,7 @@
     "company_text": "Kas sul on idee? Võtke meiega ühendust ja räägime asjast.",
     "quick_links": "Kiirlingid:",
     "home_link": "Esileht",
-    "construction_link": "Ehitus",
+    "construction_link": "Ehitamine",
     "repair_link": "Remont",
     "consultation_link": "Nõustamine",
     "contact_us_link": "Võta meiega ühendust",
@@ -31,7 +31,7 @@
     "description": "Meie ettevõte pakub laia valikut ehitusteenuseid klientidele, kes soovivad teostada ehitus- või renoveerimistöid.",
     "button_text": "Vaata rohkem",
     "construction": {
-      "title": "Ehitus",
+      "title": "Ehitamine",
       "description": "Teenust osutame terrasside, kuuride, pergolate, kõrvalhoonete, puukuuride - kuuride ehituseks ja soojapeenarde korrastamiseks."
     },
 
@@ -53,7 +53,7 @@
     "contact_info": "Võtke meiega ühendust vormi kaudu või helistage +327 555 555 55",
     "section_from": {
       "title": "Palun vali",
-      "construction": "Ehitus",
+      "construction": "Ehitamine",
       "repair": "Remont",
       "consultation": "Nõustamine"
     },
@@ -63,5 +63,45 @@
     "work_place_input": "Töö tegemise koht",
     "work_description_input": "Töö kirjeldus",
     "projects_button": "Esitada vormi"
+  },
+  "services": {
+    "terrace_construction": {
+      "title": "Terrassi ehitamine",
+      "service_title": "Ehitustööd",
+      "service_description": "Juba aastaid on meie meeskonna teenuseid kasutanud Eesti suveelanikud ja koduomanikud. Ait või maja juurdeehitus, veranda või soe aiapeenar - teeme kõik.",
+      "type_of_work_title": "Ehitustööde liigid",
+      "content": {
+        "cost_title": "Hind alates",
+        "cost_description": "Palun võtke meiega ühendust, et arutada töö väärtust",
+        "content_description": "Tellides meilt terrassi ehituse, võite olla kindel meie töötajate kvaliteedis ja professionaalsuses. Töid teostame algusest lõpuni ise sh vundamendi rajamine, ehitus ja viimistlustööd. Hoolime oma töö kvaliteedist ja professionaalsusest, et saaksite lihtsalt ja meeldivalt tulemust nautida!"
+      },
+      "contact_us_title": "Võtke meiega ühendust vormi kaudu või helistage +327 555 555 55",
+      "type_of_work_links": [
+        {
+          "link_title": "Terrassi ehitamine",
+          "link_url": "/terrace-construction"
+        },
+        {
+          "link_title": "Varikatuse ehitamine",
+          "link_url": "/canopy-construction"
+        },
+        {
+          "link_title": "Pergola ehitamine",
+          "link_url": "/pergola-construction"
+        },
+        {
+          "link_title": "Laienduste ehitamine",
+          "link_url": "/extensions-construction"
+        },
+        {
+          "link_title": "Puukuuride ja kuuride ehitamine",
+          "link_url": "/woodsheds-construction"
+        },
+        {
+          "link_title": "Soe peenra paigutus",
+          "link_url": "/warp-bed-construction"
+        }
+      ]
+    }
   }
 }

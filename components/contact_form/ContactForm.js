@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styles from "@/styles/ContactForm.module.css"
 
-function ContactForm({contact_object}) {
+function ContactForm({contact_object, display_select_menu}) {
     const [name, setName] = useState(" ")
     const [email, setEmail] = useState(" ")
     const [value, setValue] = useState()
@@ -34,12 +34,17 @@ function ContactForm({contact_object}) {
                         {contact_object.contact_info}
                     </i>
                 </p>
-                <select className={styles.formSelect} defaultValue="DEFAULT" onChange={(e) => setValue(e.target.value)}>
-                    <option value="DEFAULT" defaultValue hidden>{contact_object.section_from.title}</option>
-                    <option value="building">{contact_object.section_from.construction}</option>
-                    <option value="repair">{contact_object.section_from.repair}</option>
-                    <option value="consultations">{contact_object.section_from.consultation}</option>
-                </select>
+                {display_select_menu ? (
+                    <select className={styles.formSelect} defaultValue="DEFAULT" onChange={(e) => setValue(e.target.value)}>
+                        <option value="DEFAULT" defaultValue hidden>{contact_object.section_from.title}</option>
+                        <option value="building">{contact_object.section_from.construction}</option>
+                        <option value="repair">{contact_object.section_from.repair}</option>
+                        <option value="consultations">{contact_object.section_from.consultation}</option>
+                    </select>
+                ) : (
+                    <></>
+                )}
+
 
                 <div className={styles.contactFormRow}>
                     <div className={styles.inputContainer}>

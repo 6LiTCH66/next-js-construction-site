@@ -46,7 +46,7 @@ export default function RightNavbar(props) {
     return (
         <Ul open={props.open}>
             <li className={styles.nav__listitem}>
-                <Link href="components">{props.navbar_text.home}</Link>
+                <Link href="/">{props.navbar_text.home}</Link>
             </li>
             <li className={`${styles.dropdown} ${styles.nav__listitem}`}>
                 <Link href="components#services">
