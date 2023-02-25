@@ -5,6 +5,7 @@ import Header from "../../components/header/Header";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
 import OurServices from "../../components/our_services/OurServices";
+import Projects from "../../components/projects/Projects";
 
 export default function Home() {
     const { t } = useTranslation()
@@ -17,6 +18,7 @@ export default function Home() {
           header_button={t("header.header_button")}
       />
         <OurServices our_services_object={t("our_services", { returnObjects: true})}/>
+        <Projects/>
 
     </>
   )
