@@ -10,11 +10,18 @@ body{
     font-family: Roboto, sans-serif;
 }
 
+input::placeholder, textarea::placeholder {
+    opacity: 0;
+}
+
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+}
+.formInput input::placeholder, textarea::placeholder {
+    opacity: 0;
 }
 

@@ -1,11 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
-import Header from "../../components/header/Header";
+
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
+import Header from "../../components/header/Header";
 import OurServices from "../../components/our_services/OurServices";
 import Projects from "../../components/projects/Projects";
+import ContactForm from "../../components/contact_form/ContactForm";
 
 export default function Home() {
     const { t } = useTranslation()
@@ -19,6 +21,7 @@ export default function Home() {
       />
         <OurServices our_services_object={t("our_services", { returnObjects: true})}/>
         <Projects/>
+        <ContactForm/>
 
     </>
   )

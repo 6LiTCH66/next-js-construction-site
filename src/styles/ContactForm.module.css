@@ -1,0 +1,145 @@
+.contactContainer{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.contactWrapper{
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.formSelect{
+    width: 100%;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    border: 2px solid var(--color-bg-light-button);
+}
+.formSelect:hover{
+    cursor: pointer;
+}
+.contactInfo{
+    font-weight: 300;
+    font-size: 13px;
+    margin-bottom: 1rem;
+}
+
+
+.formInput {
+    position: relative;
+
+}
+
+/*.formInput input::placeholder, textarea::placeholder {*/
+/*    opacity: 0;*/
+/*}*/
+
+.formInput input, #workDescription {
+    width: 100%;
+    height: 44px;
+    font-size: 1rem;
+    padding: 10px;
+    outline: none;
+    border: 2px solid var(--color-bg-light-button);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+
+.formInput label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: inherit;
+
+}
+
+.formInput input:focus + label,
+.formInput input:not(:placeholder-shown) + label
+{
+    top: 0;
+    font-size: 12px;
+    background: #FFFFFF;
+}
+
+.formInput textarea:focus + label,
+.formInput textarea:not(:placeholder-shown) + label
+{
+    top: 0!important;
+    font-size: 12px;
+    background: #FFFFFF;
+}
+
+.formInput input:focus {
+    border: 2.5px solid var(--color-bg-light-button);
+}
+
+#workDescription{
+    height: 100%;
+    resize: none;
+}
+.textareaLabel{
+    top: 20%!important;
+}
+
+.contactFormRow{
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+.formInput{
+    flex: 1;
+}
+.formButton{
+    margin-top: 40px;
+}
+.sendButton{
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: var(--color-bg-light-button);
+    border: none;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    width: 100%;
+    cursor: pointer;
+}
+.inputContainer{
+    width: 100%;
+}
+.errorInput{
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+    color: #d32f2f;
+}
+.errorHelperText input{
+    border: 2px solid #d32f2f !important;
+}
+.errorHelperText label{
+    color: #d32f2f !important;
+}
+.required:after{
+    content: " *";
+    color: #d32f2f;
+}
+
+@media screen and (max-width: 480px){
+    .contactFormRow{
+        flex-direction: column;
+    }
+}
