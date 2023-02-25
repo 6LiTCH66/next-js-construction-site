@@ -63,7 +63,7 @@
     font-weight: 500;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 820px){
     .headerContainer{
         padding: 2rem;
     }

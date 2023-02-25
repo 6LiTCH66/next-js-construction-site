@@ -11,7 +11,7 @@ const Ul = styled.ul`
   align-items: center;
   
   
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
     flex-flow: column;
     background-color: #FFFFFF;
     opacity: 0.95;
