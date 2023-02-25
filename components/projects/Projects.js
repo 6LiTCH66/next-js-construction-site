@@ -15,7 +15,7 @@ const fetchAllImages = () => {
     return imagesArray
 }
 
-function Projects(props) {
+function Projects({project_title, projects_button}) {
     const [images, setImages] = useState([])
 
     useEffect(() => {
@@ -28,7 +28,7 @@ function Projects(props) {
         <div className={styles.projectsContainer}>
             <div className={styles.projectsContainerText}>
                 <span className={styles.projectsTitle}>
-                    Наши работы
+                    {project_title}
                 </span>
             </div>
             <div className={styles.projectsImageContainer}>
@@ -38,7 +38,7 @@ function Projects(props) {
                     </div>
                 ))}
             </div>
-            <Link href="#" className={styles.projectsButton}>Показать больше</Link>
+            <Link href="#" className={styles.projectsButton}>{projects_button}</Link>
 
         </div>
     );

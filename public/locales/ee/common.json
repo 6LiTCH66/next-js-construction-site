@@ -10,6 +10,17 @@
   "contacts": "Kontakt",
   "offer": "Küsi pakkumine"
   },
+  "footer": {
+    "company_text": "Kas sul on idee? Võtke meiega ühendust ja räägime asjast.",
+    "quick_links": "Kiirlingid:",
+    "home_link": "Esileht",
+    "construction_link": "Ehitus",
+    "repair_link": "Remont",
+    "consultation_link": "Nõustamine",
+    "contact_us_link": "Võta meiega ühendust",
+    "contacts": "Kontaktid:",
+    "city_name": "Tallinn"
+  },
   "header":{
     "header_title": "Kas ehitate midagi?",
     "header_description": " - professionaalide meeskond, kes aitab teil realiseerida teie soovid terrassi, kuuri või aiatööriistade maja ehitamisel.",
@@ -33,5 +44,24 @@
       "title": "Nõustamine",
       "description":  "Meil on hea meel pakkuda teile tasuta konsultatsiooni. Meie eksperdid on valmis teid aitama mis tahes probleemi lahendamisel. Esitage küsimusi ja saage kvaliteetseid vastuseid."
     }
+  },
+  "our_projects": {
+    "title": "Meie tööd",
+    "button_title": "Vaata rohkem"
+  },
+  "contact_form": {
+    "contact_info": "Võtke meiega ühendust vormi kaudu või helistage +327 555 555 55",
+    "section_from": {
+      "title": "Palun vali",
+      "construction": "Ehitus",
+      "repair": "Remont",
+      "consultation": "Nõustamine"
+    },
+    "name_input": "Nimi",
+    "email_input": "Email",
+    "telephone_input": "Telefon",
+    "work_place_input": "Töö tegemise koht",
+    "work_description_input": "Töö kirjeldus",
+    "projects_button": "Esitada vormi"
   }
 }

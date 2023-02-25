@@ -7,7 +7,10 @@ import {useTranslation} from "next-i18next";
 function App({ Component, pageProps }) {
     const { t } = useTranslation()
   return (
-      <Layout navbar_text={t("navbar", { returnObjects: true})}>
+      <Layout
+          navbar_text={t("navbar", { returnObjects: true})}
+          footer_text={t("footer", { returnObjects: true})}
+      >
         <Component {...pageProps} />
       </Layout>
   )
