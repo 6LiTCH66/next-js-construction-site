@@ -64,6 +64,13 @@
     "work_description_input": "Töö kirjeldus",
     "projects_button": "Esitada vormi"
   },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Võtke meiega ühendust ja saage tasuta professionaalset nõu kõikides ehitusküsimustes.",
+    "email": "Email:",
+    "telephone": "Telefon:",
+    "info_title": "Meiega saate ühendust võtta helistades või saates sõnumi."
+  },
   "services": {
     "construction": {
       "service_title": "Ehitustööd",
