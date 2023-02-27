@@ -67,13 +67,13 @@ export default function RightNavbar(props) {
 
             </li>
             <li className={styles.nav__listitem}>
-                <Link href="components#gallery">{props.navbar_text.gallery}</Link>
+                <Link href="/gallery">{props.navbar_text.gallery}</Link>
             </li >
+            {/*<li className={styles.nav__listitem}>*/}
+            {/*    <Link href="components#price">{props.navbar_text.price}</Link>*/}
+            {/*</li>*/}
             <li className={styles.nav__listitem}>
-                <Link href="components#price">{props.navbar_text.price}</Link>
-            </li>
-            <li className={styles.nav__listitem}>
-                <Link href="components#contact">{props.navbar_text.contacts}</Link>
+                <Link href="/contact">{props.navbar_text.contacts}</Link>
             </li>
 
             <div className={styles.linkButton}>

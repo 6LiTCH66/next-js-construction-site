@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from "@/styles/ContactForm.module.css"
 
+
 function ContactForm({contact_object, display_select_menu}) {
     const [name, setName] = useState(" ")
     const [email, setEmail] = useState(" ")

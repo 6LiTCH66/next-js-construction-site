@@ -1,0 +1,118 @@
+.contactUsContainer{
+    display: flex;
+    justify-content: center;
+    padding: 0 8rem;
+}
+.contactUsHeader{
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("../../public/assets/hero-background.jpg") no-repeat;
+    padding: 3.75rem 8rem;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.contactUsTitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+.contactUsHeaderWrapper{
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    min-height: 156px;
+}
+.contactUsDescription{
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    height: 100%;
+    min-height: 75px;
+}
+.contactUsHeaderWrapper hr{
+    border: 1px solid #FFFFFF;
+}
+.contactUsWrapper{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 5rem 0;
+}
+.contactUsForm{
+    flex: 1;
+}
+.contactUsInfo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.contactUsInfoTitle{
+    color: rgba(0, 0, 0, 0.5);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+}
+.contactUsText{
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+.contactUsText a{
+    /*text-decoration: none;*/
+    color: var(--color-bg-light-button);
+}
+
+.contactUsTextContainer{
+    margin-top: auto;
+}
+.verticalLine{
+    border: 1px solid #000000;
+    margin: 0 1rem;
+}
+
+.mobile{
+    display: none;
+    margin: 2rem 0;
+}
+
+@media screen and (max-width: 768px){
+    .contactUsContainer, .contactUsHeader{
+        padding: 1rem;
+    }
+    .contactUsContainer{
+        justify-content: flex-start;
+    }
+    .contactUsWrapper{
+        flex-direction: column;
+        margin: 0;
+    }
+    .contactUsInfoTitle{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+        font-size: 16px;
+    }
+    .contactUsInfo{
+        margin-top: 2rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .contactUsTitle{
+        font-size: 24px;
+    }
+    .contactUsDescription{
+        font-size: 16px;
+        line-height: 1.2rem;
+    }
+    .contactUsText{
+        font-size: 18px;
+    }
+
+    .contactUsWrapper{
+        margin-top: 0;
+    }
+
+}
