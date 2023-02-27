@@ -65,17 +65,10 @@
     "projects_button": "Esitada vormi"
   },
   "services": {
-    "terrace_construction": {
-      "title": "Terrassi ehitamine",
+    "construction": {
       "service_title": "Ehitustööd",
       "service_description": "Juba aastaid on meie meeskonna teenuseid kasutanud Eesti suveelanikud ja koduomanikud. Ait või maja juurdeehitus, veranda või soe aiapeenar - teeme kõik.",
       "type_of_work_title": "Ehitustööde liigid",
-      "content": {
-        "cost_title": "Hind alates",
-        "cost_description": "Palun võtke meiega ühendust, et arutada töö väärtust",
-        "content_description": "Tellides meilt terrassi ehituse, võite olla kindel meie töötajate kvaliteedis ja professionaalsuses. Töid teostame algusest lõpuni ise sh vundamendi rajamine, ehitus ja viimistlustööd. Hoolime oma töö kvaliteedist ja professionaalsusest, et saaksite lihtsalt ja meeldivalt tulemust nautida!"
-      },
-      "contact_us_title": "Võtke meiega ühendust vormi kaudu või helistage +327 555 555 55",
       "type_of_work_links": [
         {
           "link_title": "Terrassi ehitamine",
@@ -101,7 +94,17 @@
           "link_title": "Soe peenra paigutus",
           "link_url": "/warp-bed-construction"
         }
-      ]
+      ],
+      "terrace_construction": {
+        "title": "Terrassi ehitamine",
+        "content": {
+          "cost_title": "Hind alates",
+          "cost_description": "Palun võtke meiega ühendust, et arutada töö väärtust",
+          "content_description": "Tellides meilt terrassi ehituse, võite olla kindel meie töötajate kvaliteedis ja professionaalsuses. Töid teostame algusest lõpuni ise sh vundamendi rajamine, ehitus ja viimistlustööd. Hoolime oma töö kvaliteedist ja professionaalsusest, et saaksite lihtsalt ja meeldivalt tulemust nautida!"
+        },
+        "contact_us_title": "Võtke meiega ühendust vormi kaudu või helistage +327 555 555 55"
+      }
     }
+
   }
 }
