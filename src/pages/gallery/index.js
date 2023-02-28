@@ -1,36 +1,41 @@
-import React, {useEffect, useState} from 'react';
-import Link from "next/link"
-import styles from "@/styles/Projects.module.css"
+import React, {useState, useEffect} from "react";
 import Image from "next/image"
-import fetchAllImages from "../../utils/getImages"
-
-function Projects({project_title, projects_button}) {
+import fetchAllImages from "../../../utils/getImages"
+import styles from "@/styles/Projects.module.css";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+export default function Gallery(){
     const [images, setImages] = useState([])
 
     useEffect(() => {
         const images = fetchAllImages()
 
         setImages(images)
-    }, [])
+    }, []);
+
 
     return (
         <div className={styles.projectsContainer}>
             <div className={styles.projectsContainerText}>
                 <span className={styles.projectsTitle}>
-                    {project_title}
+                    Наши сделанные проекты
                 </span>
             </div>
             <div className={styles.projectsImageContainer}>
-                {images.slice(0, 6).map((image, key) => (
+                {images.map((image, key) => (
                     <div className={styles.imageWrapper} key={key}>
                         <Image src={image} alt="image" className={styles.projectsImage}/>
                     </div>
                 ))}
             </div>
-            <Link href="/gallery" className={styles.projectsButton}>{projects_button}</Link>
-
         </div>
-    );
+    )
 }
 
-export default Projects;
+export async function getStaticProps({ locale }) {
+
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ["common"])),
+        },
+    };
+}
