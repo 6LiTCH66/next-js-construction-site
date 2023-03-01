@@ -47,6 +47,7 @@
     height: 310px;
     object-fit: cover;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .projectsButton{

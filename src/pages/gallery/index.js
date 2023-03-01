@@ -6,16 +6,17 @@ import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import someImage from "../../../public/assets/consultation.jpg"
 export default function Gallery(){
     const [images, setImages] = useState([])
-    const [selectedImage, setSelectedImage] = useState(someImage)
+    const [imageId, setImageId] = useState()
+    const [openModal, setOpenModal] = useState(false)
     useEffect(() => {
         const images = fetchAllImages()
 
         setImages(images)
     }, []);
-    const getSrc = (event) =>{
-        event.preventDefault();
-        setSelectedImage(event.target.src)
-        console.log(event.target.src)
+
+    const getImageId = (imageId) =>{
+        setImageId(imageId)
+        setOpenModal(true)
     }
 
     return (
@@ -29,15 +30,15 @@ export default function Gallery(){
                 <div className={styles.projectsImageContainer}>
                     {images.map((image, key) => (
                         <div className={styles.imageWrapper} key={key}>
-                            <Image src={image} alt="image" className={styles.projectsImage} onClick={getSrc}/>
+                            <Image src={image} alt="image" className={styles.projectsImage} onClick={() => getImageId(key)}/>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <div id={styles.myModal} className={styles.modal}>
-                <span className={styles.close}>×</span>
-                <Image src={images[16]} alt="image" className={styles.modalContent}/>
+            <div id={styles.myModal} className={styles.modal} style={{display: openModal ? "block" : "none"}} onClick={() => setOpenModal(false)}>
+                <span className={styles.close} onClick={() => setOpenModal( false)}>×</span>
+                <Image src={imageId ? images[imageId] : someImage } alt="modal image" className={styles.modalContent}/>
             </div>
         </>
 
