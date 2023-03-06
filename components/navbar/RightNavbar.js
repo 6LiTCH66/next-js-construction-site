@@ -35,50 +35,52 @@ const Ul = styled.ul`
 export default function RightNavbar(props) {
     const router = useRouter();
     const { locales, locale: activeLocale } = router;
-    // console.log(locales)
-    // console.log(activeLocale)
+
+
 
     const otherLocales = locales?.filter(
         (locale) => locale !== activeLocale
     );
-    // console.log(otherLocales)
 
     return (
         <Ul open={props.open}>
             <li className={styles.nav__listitem}>
-                <Link href="/">{props.navbar_text.home}</Link>
+                <Link href="/" onClick={props.onClick}>{props.navbar_text.home}</Link>
             </li>
             <li className={`${styles.dropdown} ${styles.nav__listitem}`}>
-                <Link href="components#services">
+                <Link href="" onClick={(event) => event.preventDefault()}>
                     {props.navbar_text.services}
                     <IoIosArrowDown size={13}/>
                 </Link>
                 <ul className={styles.nav__listitemdrop}>
                     <li>
-                        <Link href="/terrace-construction">{props.navbar_text.construction}</Link>
+                        <Link href="/terrace-construction" onClick={props.onClick}>{props.navbar_text.construction}</Link>
                     </li>
                     <li>
-                        <Link href="/floor-resurfacing">{props.navbar_text.repair}</Link>
+                        <Link href="/floor-resurfacing" onClick={props.onClick}>{props.navbar_text.repair}</Link>
                     </li>
                     <li>
-                        <Link href="/consultation">{props.navbar_text.consultations}</Link>
+                        <Link href="/consultation" onClick={props.onClick}>{props.navbar_text.consultations}</Link>
                     </li>
                 </ul>
 
             </li>
             <li className={styles.nav__listitem}>
-                <Link href="/gallery">{props.navbar_text.gallery}</Link>
+                <Link href="/gallery" onClick={props.onClick}>{props.navbar_text.gallery}</Link>
             </li >
+
             {/*<li className={styles.nav__listitem}>*/}
             {/*    <Link href="components#price">{props.navbar_text.price}</Link>*/}
             {/*</li>*/}
+
             <li className={styles.nav__listitem}>
-                <Link href="/contact">{props.navbar_text.contacts}</Link>
+                <Link href="/contact" onClick={props.onClick}>{props.navbar_text.contacts}</Link>
             </li>
 
             <div className={styles.linkButton}>
-                <Link href="/offer">{props.navbar_text.offer}</Link>
+                <Link href="/offer" onClick={props.onClick}>{props.navbar_text.offer}</Link>
             </div>
+
             <li className={`${styles.dropdown} ${styles.nav__listitem} ${styles.language}`}>
                 {otherLocales?.map((locale) => {
                     const { pathname, query, asPath } = router;

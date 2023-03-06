@@ -177,6 +177,7 @@
     .dropdown:hover::after, .dropdown:focus::after {
         width: 0 !important;
     }
+
     .nav__listitemdrop{
         position: static;
         display: none;
@@ -195,6 +196,7 @@
     }
     .dropdown{
         padding: 0;
+
     }
     .linkButton{
         margin-top: 2rem;

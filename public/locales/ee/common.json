@@ -71,6 +71,12 @@
     "telephone": "Telefon:",
     "info_title": "Meiega saate ühendust võtta helistades või saates sõnumi."
   },
+  "offer": {
+    "title": "Küsi pakkumine"
+  },
+  "gallery": {
+    "title": "Meie lõpetatud projektid"
+  },
   "services": {
     "construction": {
       "service_title": "Ehitustööd",

@@ -59,7 +59,7 @@ export default function Burger({navbar_text}) {
             </StyledBurger>
 
             <RightNavbar open={open} onClick={handleLinkClick} navbar_text={navbar_text}/>
-            <div className={open ? styles.headerMobileMenuBlackout : ""}>
+            <div className={open ? styles.headerMobileMenuBlackout : ""} onClick={() => setOpen(!open)}>
 
             </div>
         </>

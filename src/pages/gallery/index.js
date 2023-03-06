@@ -4,10 +4,13 @@ import fetchAllImages from "../../../utils/getImages"
 import styles from "@/styles/Projects.module.css";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import someImage from "../../../public/assets/consultation.jpg"
+import {useTranslation} from "next-i18next";
+
 export default function Gallery(){
     const [images, setImages] = useState([])
     const [imageId, setImageId] = useState()
     const [openModal, setOpenModal] = useState(false)
+    const {t} = useTranslation()
     useEffect(() => {
         const images = fetchAllImages()
 
@@ -24,7 +27,7 @@ export default function Gallery(){
             <div className={styles.projectsContainer}>
                 <div className={styles.projectsContainerText}>
                 <span className={styles.projectsTitle}>
-                    Наши сделанные проекты
+                    {t("gallery.title")}
                 </span>
                 </div>
                 <div className={styles.projectsImageContainer}>
