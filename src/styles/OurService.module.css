@@ -66,6 +66,7 @@
     margin-top: 80px;
     max-width: 1280px;
     width: 100%;
+    gap: 1rem;
 }
 
 .servicesContentButton{
