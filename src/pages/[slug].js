@@ -1,26 +1,25 @@
-import {serverSideTranslations} from "next-i18next/serverSideTranslations";
-import {useTranslation} from "next-i18next";
 import styles from "@/styles/DynamicServices.module.css"
 import ContactForm from "../../components/contact_form/ContactForm";
 import Link from "next/link"
 import {useRouter} from "next/router";
-import nextI18NextConfig from "/next.config"
-export default function DynamicServices({servicesType}){
-    const {t} = useTranslation();
+import useTranslation from "next-translate/useTranslation";
+import getT from "next-translate/getT";
+
+export default function DynamicServices({services}){
+    const {t} = useTranslation("common");
     const router = useRouter();
     const replacedSlug = router.query.slug.replaceAll("-", "_")
-    const typesOfWorkArray = Array.from(t(`services.${servicesType}.type_of_work_links`, {returnObjects: true}));
 
     return(
         <div className={styles.constructionBox}>
             <div className={styles.constructionHeader}>
                 <div className={styles.constructionHeaderWrapper}>
                     <p className={styles.constructionHeaderTitle}>
-                        {t(`services.${servicesType}.service_title`)}
+                        {services.service_title}
                     </p>
                     <hr/>
                     <p className={styles.constructionHeaderDescription}>
-                        {t(`services.${servicesType}.service_description`)}
+                        {services.service_description}
                     </p>
                 </div>
 
@@ -31,11 +30,11 @@ export default function DynamicServices({servicesType}){
                     <div className={styles.workTypesContainer}>
                         <p className={styles.workTypesTitle}>
 
-                            {t(`services.${servicesType}.type_of_work_title`)}
+                            {services.type_of_work_title}
                         </p>
                         <ul className={styles.workTypes}>
 
-                            {typesOfWorkArray.map((link, id) =>{
+                            {services.type_of_work_links.map((link, id) =>{
                                 return(
                                     <li key={id}>
                                         <Link href={link.link_url}>
@@ -49,22 +48,22 @@ export default function DynamicServices({servicesType}){
 
                     <div className={styles.workInfoContainer}>
                         <p className={styles.workInfoTitle}>
-                            {t(`services.${servicesType}.${replacedSlug}.title`)}
+                            {services[replacedSlug].title}
                         </p>
 
                         <p className={styles.workInfoText}>
 
-                            {t(`services.${servicesType}.${replacedSlug}.content.cost_title`)}
+                            {services[replacedSlug].content.cost_title}
                         </p>
                         <ul>
                             <li className={styles.workInfoText}>
-                                {t(`services.${servicesType}.${replacedSlug}.content.cost_description`)}
+                                {services[replacedSlug].content.cost_description}
                             </li>
                         </ul>
                         <p className={styles.workInfoText} id={styles.workDescription}>
-                            {t(`services.${servicesType}.${replacedSlug}.content.content_description`)}
+                            {services[replacedSlug].content.content_description}
                         </p>
-                        <ContactForm contact_object={t("contact_form", {returnObjects: true})} display_select_menu={false}/>
+                        <ContactForm contact_object={t("contact_form", {}, {returnObjects: true})} display_select_menu={false}/>
                     </div>
                 </div>
             </div>
@@ -95,7 +94,6 @@ export async function getStaticPaths({ locales }) {
         })
     })
 
-    // console.log(paramsArray)
 
     return {
         paths: paramsArray,
@@ -133,14 +131,11 @@ function getServicesType(pagePath){
     }
 
 }
-export async function getStaticProps({ locale, params }) {
+
+export const getStaticProps = async ({ locale, params }) => {
     const pagePath = params.slug;
     const serviceType = getServicesType(pagePath)
 
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, ["common"], nextI18NextConfig)),
-            servicesType: serviceType
-        },
-    };
+    const t = await getT(locale, 'common')
+    return { props: { services: t(`services.${serviceType}`, {}, {returnObjects: true}) } }
 }

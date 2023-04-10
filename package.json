@@ -12,16 +12,18 @@
     "@next/font": "13.1.6",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
-    "i18next": "^22.4.14",
     "next": "13.1.6",
-    "next-i18next": "^13.2.2",
+    "next-language-detector": "^1.0.2",
+    "next-translate": "^2.0.4",
     "react": "18.2.0",
     "react-country-flag": "^3.0.2",
     "react-dom": "18.2.0",
-    "react-i18next": "^12.2.0",
     "react-icons": "^4.7.1",
     "react-modal-image": "^2.6.0",
     "styled-components": "^5.3.6",
     "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "next-translate-plugin": "^2.0.4"
   }
 }

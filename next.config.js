@@ -1,16 +1,10 @@
-/** @type {import('next').NextConfig} */
-const { i18n } = require("./next-i18next.config");
+const nextTranslate = require('next-translate-plugin')
 
-const nextConfig = {
-  i18n,
-  reactStrictMode: true,
-
-  compiler:{
-    styledComponents: true
-  },
-
-  swcMinify: true,
-
+module.exports = {
+    reactStrictMode: true,
+    compiler: {
+        styledComponents: true
+    },
+    swcMinify: true,
+    ...nextTranslate()
 }
-
-module.exports = nextConfig

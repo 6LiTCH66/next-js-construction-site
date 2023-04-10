@@ -2,15 +2,16 @@ import React, {useState, useEffect} from "react";
 import Image from "next/image"
 import fetchAllImages from "../../../utils/getImages"
 import styles from "@/styles/Projects.module.css";
-import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import someImage from "../../../public/assets/consultation.jpg"
-import {useTranslation} from "next-i18next";
+import useTranslation from "next-translate/useTranslation";
 
 export default function Gallery(){
     const [images, setImages] = useState([])
     const [imageId, setImageId] = useState()
     const [openModal, setOpenModal] = useState(false)
-    const {t} = useTranslation()
+
+    const {t} = useTranslation("common")
+
     useEffect(() => {
         const images = fetchAllImages()
 
@@ -46,13 +47,4 @@ export default function Gallery(){
         </>
 
     )
-}
-
-export async function getStaticProps({ locale }) {
-
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, ["common"])),
-        },
-    };
 }

@@ -1,11 +1,9 @@
-import {serverSideTranslations} from "next-i18next/serverSideTranslations";
-import {useTranslation} from "next-i18next";
 import styles from "@/styles/ContactPage.module.css"
 import stylesForm from "@/styles/ContactForm.module.css"
 import React, {useState} from "react";
-
+import useTranslation from "next-translate/useTranslation";
 export default function Contact() {
-    const { t } = useTranslation();
+    const { t } = useTranslation("common");
     const [name, setName] = useState(" ")
     const [email, setEmail] = useState(" ")
 
@@ -101,11 +99,4 @@ export default function Contact() {
     );
 }
 
-export async function getStaticProps({ locale }) {
-    return {
-        props: {
-            ...(await serverSideTranslations(locale, ["common"])),
-        },
-    };
-}
 
