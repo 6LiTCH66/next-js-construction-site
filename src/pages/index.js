@@ -8,7 +8,6 @@ import Header from "../../components/header/Header";
 import OurServices from "../../components/our_services/OurServices";
 import Projects from "../../components/projects/Projects";
 import ContactForm from "../../components/contact_form/ContactForm";
-
 export default function Home() {
     const { t } = useTranslation()
   return (
@@ -36,3 +35,5 @@ export async function getStaticProps({ locale }) {
         },
     };
 }
+
+

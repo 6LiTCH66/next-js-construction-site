@@ -4,6 +4,7 @@ import styles from "@/styles/DynamicServices.module.css"
 import ContactForm from "../../components/contact_form/ContactForm";
 import Link from "next/link"
 import {useRouter} from "next/router";
+import nextI18NextConfig from "/next.config"
 export default function DynamicServices({servicesType}){
     const {t} = useTranslation();
     const router = useRouter();
@@ -87,11 +88,14 @@ export async function getStaticPaths({ locales }) {
 
     let paramsArray = []
 
+
     locales.map((locale) => {
         slugsArray.map((slug) => {
             paramsArray.push({params: { slug: slug }, locale: locale})
         })
     })
+
+    // console.log(paramsArray)
 
     return {
         paths: paramsArray,
@@ -135,7 +139,7 @@ export async function getStaticProps({ locale, params }) {
 
     return {
         props: {
-            ...(await serverSideTranslations(locale, ["common"])),
+            ...(await serverSideTranslations(locale, ["common"], nextI18NextConfig)),
             servicesType: serviceType
         },
     };
