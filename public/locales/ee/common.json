@@ -80,7 +80,7 @@
   "services": {
     "construction": {
       "service_title": "Ehitustööd",
-      "service_description": "Juba aastaid on meie meeskonna teenuseid kasutanud Eesti suveelanikud ja koduomanikud. Ait või maja juurdeehitus, veranda või soe aiapeenar - teeme kõik.",
+      "service_description": "Eesti suveelanikud ja koduomanikud on meie meeskonna teenuseid kasutanud juba aastaid . Kuur või maja juurdeehitus, välistrepp või soe aiapeenar - teeme kõik.",
       "type_of_work_title": "Ehitustööde liigid",
       "type_of_work_links": [
         {
@@ -111,11 +111,116 @@
       "terrace_construction": {
         "title": "Terrassi ehitamine",
         "content": {
-          "cost_title": "Hind alates",
+          "cost_title": "Hind alates:",
           "cost_description": "Palun võtke meiega ühendust, et arutada töö väärtust",
-          "content_description": "Tellides meilt terrassi ehituse, võite olla kindel meie töötajate kvaliteedis ja professionaalsuses. Töid teostame algusest lõpuni ise sh vundamendi rajamine, ehitus ja viimistlustööd. Hoolime oma töö kvaliteedist ja professionaalsusest, et saaksite lihtsalt ja meeldivalt tulemust nautida!"
+          "content_description": "Tellides meilt terrassi ehituse, võite olla kindel meie töötajate  professionaalsuses. Töid teostame algusest lõpuni  sh vundamendi rajamine, ehitus - ja viimistlustööd.Hoolime oma töö kvaliteedist ja professionaalsusest, et saaksite tulemust lihtsalt ja meeldivalt nautida!"
         },
         "contact_us_title": "Võtke meiega ühendust vormi kaudu või helistage +327 555 555 55"
+      },
+
+      "canopy_construction": {
+        "title": "Varikatuse ehitus",
+        "content": {
+          "cost_title": "Hind alates:",
+          "cost_description": "palun võtke meiega ühendust, et tööde maksumust arutada",
+          "content_description": "Meie ettevõttega saate oma koju täiusliku varikatuse. Tegeleme kõigi ehituse tappidega alates vundamendi rajamisest kuni viimistlustöödeni. Meie spetsialistid pakuvad Teile parimaid lahendusi ja teostavad töid kõrgeima kvaliteediga."
+        },
+        "contact_us_title": "Võtke meiega ühendust vormi kaudu või helistage +327 555 555 55"
+      },
+      "pergola_construction": {
+        "title": "Pergola ehitus",
+        "content": {
+          "cost_title": "Hind alates:",
+          "cost_description": "palun võtke meiega ühendust, et tööde maksumust arutada",
+          "content_description": "Muutke oma kodu veelgi mugavamaks meie pergola ehitusmeeskonna abiga.  Tegeleme kõigi ehituse tappidega alates vundamendi rajamisest kuni viimistlustöödeni."
+        }
+      },
+      "extensions_construction": {
+        "title": "Laienduste ehitamine",
+        "content": {
+          "cost_title": "Hind alates:",
+          "cost_description": "palun võtke meiega ühendust, et tööde maksumust arutada",
+          "content_description": "Tellides meie ettevõttest laienduste ehituse, saate kvaliteedi ja professionaalsuse garantii. Kasutame ainult kvaliteetseid materjale ja omame sarnaste projektidega töötamise kogemust."
+        }
+      },
+      "woodsheds_construction": {
+        "title": "Puukuuride ja kuuride ehitus",
+        "content": {
+          "cost_title": "Hind alates:",
+          "cost_description": "palun võtke meiega ühendust, et tööde maksumust arutada",
+          "content_description": "Küttepuukuuride ja kuuride olemasolu on kodu infrastruktuuri oluline aspekt ja pakub palju eeliseid. Meie ettevõte pakub kvaliteetset ja usaldusväärset teenust küttepuukuuride ja -kuuride ehitamiseks."
+        }
+      },
+      "warp_bed_construction": {
+        "title": "Puitääristega kõrgendatud peenarde paigutus",
+        "content": {
+          "cost_title": "Hind alates:",
+          "cost_description": "palun võtke meiega ühendust, et tööde maksumust arutada",
+          "content_description": "Soojad peenrad on Teie aia või õue oluline element, mis aitab teil taimi mugavalt ja tõhusalt kasvatada . Parimate tulemuste saamiseks on oluline valida kvaliteetne ja töökindel seade. Seetõttu tasub soojade peenrade paigutus tellida meie ettevõttest."
+        }
+      }
+    },
+    "repair": {
+      "service_title": "Remonditööd",
+      "service_description": "Teie kodu on meie vastutus. Pakume professionaalseid teenuseid, pöörates tähelepanu detailidele ja hoolitsedes Teie mugavuse eest.",
+      "type_of_work_title": "Remonditööde liigid",
+      "type_of_work_links": [
+        {
+
+          "link_title": "Põrandakatete taastamine",
+          "link_url": "/floor-resurfacing"
+        },
+        {
+          "link_title": "Puitfassaadide renoveerimine",
+          "link_url": "/renovation-of-wooden-facades"
+        },
+        {
+          "link_title": "Terrasside hooldus ja remont",
+          "link_url": "/maintenance-repair-terraces"
+        }
+      ],
+      "floor_resurfacing": {
+        "title": "Põrandakatete taastamine",
+        "content": {
+          "cost_title": "Hind alates:",
+          "cost_description": "palun võtke meiega ühendust, et tööde maksumust arutada",
+          "content_description": "Kui soovite teostada kvaliteetset põrandakatet oma kodus või kontoris, siis on meie ettevõttest teenuste tellimine parim valik."
+        }
+      },
+      "renovation_of_wooden_facades": {
+        "title": "Puitfassaadide renoveerimine",
+        "content": {
+          "cost_title": "Hind alates:",
+          "cost_description": "palun võtke meiega ühendust, et tööde maksumust arutada",
+          "content_description": "Реновация деревянных фасадов – это важный и трудоемкий процесс, который требует высокой квалификации и опыта специалистов. Наша фирма предлагает профессиональные услуги по реновации деревянных фасадов."
+        }
+      },
+      "maintenance_repair_terraces": {
+        "title": "Terrasside hooldus ja remont",
+        "content": {
+          "cost_title": "Hind alates:",
+          "cost_description": "palun võtke meiega ühendust, et tööde maksumust arutada",
+          "content_description": "Tellides meie ettevõttest terrasside hooldust ja remonti, võite olla kindel pakutavate teenuste kõrges kvaliteedis. Kasutame Teie terrassi pikaealisuse tagamiseks ainult parimaid materjale ja seadmeid."
+        }
+      }
+    },
+    "consultation": {
+      "service_title": "Konsultatsioonid",
+      "service_description": "Lisateavet leiate meie tasuta konsultatsioonist parima lahenduse saamiseks.",
+      "type_of_work_title": "Konsultatsioonide liigid",
+      "type_of_work_links": [
+        {
+          "link_title": "Konsultatsioon",
+          "link_url": "/consultation"
+        }
+      ],
+      "consultation": {
+        "title": "Konsultatsioon",
+        "content": {
+          "cost_title": "Hind alates:",
+          "cost_description": "Meie ettevõte pakub tasuta konsultatsiooni kõikides küsimustes.",
+          "content_description": "Tasuta konsultatsiooni tellimine meie ettevõttest on tulus valik, kuna meil on palju kogemusi ja oskusi, mis võimaldab pakkuda Teile tõhusaid lahendusi Teie vajadustele."
+        }
       }
     }
 

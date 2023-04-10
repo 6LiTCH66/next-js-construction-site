@@ -7,7 +7,7 @@ import {useRouter} from "next/router";
 export default function DynamicServices({servicesType}){
     const {t} = useTranslation();
     const router = useRouter();
-    const replacedSlug = router.query.slug.replace("-", "_")
+    const replacedSlug = router.query.slug.replaceAll("-", "_")
     const typesOfWorkArray = Array.from(t(`services.${servicesType}.type_of_work_links`, {returnObjects: true}));
 
     return(
