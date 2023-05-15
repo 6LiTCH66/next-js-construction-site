@@ -1632,6 +1632,11 @@
     "@babel/runtime" "7.16.7"
     "i18next-browser-languagedetector" "6.1.2"
 
+"next-seo@^6.0.0":
+  "integrity" "sha512-jKKt1p1z4otMA28AyeoAONixVjdYmgFCWwpEFtu+DwRHQDllVX3RjtyXbuCQiUZEfQ9rFPBpAI90vDeLZlMBdg=="
+  "resolved" "https://registry.npmjs.org/next-seo/-/next-seo-6.0.0.tgz"
+  "version" "6.0.0"
+
 "next-translate-plugin@^2.0.4":
   "integrity" "sha512-4uay8TOL88IApF9nns4CGDZYJ5zlR1vdNp4K7S13zp3L+Ecqyf0MNl1nSZu5zWqH5zGW4lGqZRD1SP7Ct3mOYA=="
   "resolved" "https://registry.npmjs.org/next-translate-plugin/-/next-translate-plugin-2.0.4.tgz"

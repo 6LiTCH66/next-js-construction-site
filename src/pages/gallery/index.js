@@ -4,6 +4,7 @@ import fetchAllImages from "../../../utils/getImages"
 import styles from "@/styles/Projects.module.css";
 import someImage from "../../../public/assets/consultation.jpg"
 import useTranslation from "next-translate/useTranslation";
+import {NextSeo} from "next-seo";
 
 export default function Gallery(){
     const [images, setImages] = useState([])
@@ -11,6 +12,24 @@ export default function Gallery(){
     const [openModal, setOpenModal] = useState(false)
 
     const {t} = useTranslation("common")
+
+    const gallery_title = t("navbar.gallery", {}, {returnObjects: true})
+    const gallery_desc = t("gallery.title", {}, {returnObjects: true})
+
+    const seoData = {
+        title: gallery_title,
+        description: gallery_desc,
+        openGraph: {
+            title: gallery_title,
+            description: gallery_desc,
+            // images: [
+            //     {
+            //         url: 'https://example.com/terrace-construction.jpg', // Replace with the actual image URL
+            //         alt: 'Terrace Construction',
+            //     },
+            // ],
+        },
+    };
 
     useEffect(() => {
         const images = fetchAllImages()
@@ -25,6 +44,7 @@ export default function Gallery(){
 
     return (
         <>
+            <NextSeo {...seoData}/>
             <div className={styles.projectsContainer}>
                 <div className={styles.projectsContainerText}>
                 <span className={styles.projectsTitle}>

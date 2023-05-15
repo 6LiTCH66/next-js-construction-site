@@ -2,10 +2,27 @@ import styles from "@/styles/ContactPage.module.css"
 import stylesForm from "@/styles/ContactForm.module.css"
 import React, {useState} from "react";
 import useTranslation from "next-translate/useTranslation";
+import {NextSeo} from "next-seo";
+
 export default function Contact() {
     const { t } = useTranslation("common");
     const [name, setName] = useState(" ")
     const [email, setEmail] = useState(" ")
+
+    const seoData = {
+        title: t("contact.title"),
+        description: t("contact.description"),
+        openGraph: {
+            title: t("contact.title"),
+            description: t("contact.description"),
+            // images: [
+            //     {
+            //         url: 'https://example.com/terrace-construction.jpg', // Replace with the actual image URL
+            //         alt: 'Terrace Construction',
+            //     },
+            // ],
+        },
+    };
 
     const nameChange = event =>{
         setName(event.target.value);
@@ -27,6 +44,7 @@ export default function Contact() {
     }
     return (
         <div className={styles.contactUsBox}>
+            <NextSeo {...seoData}/>
             <div className={styles.contactUsHeader}>
                 <div className={styles.contactUsHeaderWrapper}>
                     <p className={styles.contactUsTitle}>{t("contact.title")}</p>

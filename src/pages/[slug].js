@@ -4,14 +4,44 @@ import Link from "next/link"
 import {useRouter} from "next/router";
 import useTranslation from "next-translate/useTranslation";
 import getT from "next-translate/getT";
+import Head from 'next/head'
+import {NextSeo} from "next-seo";
 
 export default function DynamicServices({services}){
     const {t} = useTranslation("common");
     const router = useRouter();
     const replacedSlug = router.query.slug.replaceAll("-", "_")
 
+    const seoData = {
+        title: services[replacedSlug].title,
+        description: services[replacedSlug].content.content_description,
+        openGraph: {
+            title: services[replacedSlug].title,
+            description: services[replacedSlug].content.content_description,
+            // images: [
+            //     {
+            //         url: 'https://example.com/terrace-construction.jpg', // Replace with the actual image URL
+            //         alt: 'Terrace Construction',
+            //     },
+            // ],
+        },
+    };
+
+
     return(
         <div className={styles.constructionBox}>
+
+            {/*<Head>*/}
+            {/*    <title>{services.service_title} - {services[replacedSlug].title}</title>*/}
+            {/*    <meta name="description" content={services.service_description} />*/}
+            {/*    <meta property="og:title" content={services.service_title} />*/}
+            {/*    <meta property="og:description" content={services.service_description} />*/}
+            {/*    <meta property="og:url" content={`https://www.semarim.ee/${router.query.slug}`} />*/}
+            {/*    <meta property="og:type" content="website" />*/}
+            {/*</Head>*/}
+
+            <NextSeo {...seoData}/>
+
             <div className={styles.constructionHeader}>
                 <div className={styles.constructionHeaderWrapper}>
                     <p className={styles.constructionHeaderTitle}>
