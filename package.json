@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,6 +17,7 @@
     "next": "13.1.6",
     "next-language-detector": "^1.0.2",
     "next-seo": "^6.0.0",
+    "next-sitemap": "^4.1.3",
     "next-translate": "^2.0.4",
     "react": "18.2.0",
     "react-country-flag": "^3.0.2",

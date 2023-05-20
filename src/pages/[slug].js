@@ -124,6 +124,13 @@ export async function getStaticPaths({ locales }) {
         })
     })
 
+    // console.log(paramsArray)
+
+
+    // const transformedArray = array.map(item => `/${item.locale}/${item.params.slug}`);
+    // console.log(transformedArray);
+
+
 
     return {
         paths: paramsArray,
