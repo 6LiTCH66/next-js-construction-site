@@ -100,9 +100,9 @@ export default function Contact() {
                                 Registrikood: 14439231
                             </h2>
                             <h2 className={styles.contactUsText}>
-                                {t("contact.email")} <a href="mailto:rimgor@yandex.ru">rimgor@yandex.ru</a>
+                                {t("contact.email")} <a href="mailto:info.semarim@gmail.com">info.semarim@gmail.com</a>
                                 <br/>
-                                {t("contact.telephone")} <a href="tel:+37258491096">+372 58491096</a>
+                                {t("contact.telephone")} <a href="tel:+37258491096">+372 584 910 96</a>
                             </h2>
                             <h2 className={styles.contactUsText}>
                                 Harju maakond, Maardu linn, Veeru tn 16-37, 74113

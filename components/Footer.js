@@ -44,17 +44,23 @@ function Footer({footer_text}) {
                     </span>
                     <ul className={styles.contactLinks}>
                         <li>
-                            <FiMail/> mail@gmail.com
+                            <Link href="mailto: info.semarim@gmail.com">
+                                <FiMail/> info.semarim@gmail.com
+                            </Link>
+
                         </li>
                         <li>
-                            <BsTelephone/> +372 555 555 55
+                            <Link href="tel:+37258491096">
+                                <BsTelephone/> +372 584 910 96
+                            </Link>
+
                         </li>
                         <li>
                             <HiOutlineLocationMarker/> {footer_text.city_name}
                         </li>
                     </ul>
                     <div className="footer-social-links">
-                        <Link href="#facebook">
+                        <Link href="https://www.facebook.com/profile.php?id=100068329059742" target="_blank">
                             <FaFacebookSquare color="white" size={30}/>
                         </Link>
                     </div>

@@ -31,14 +31,6 @@ export default function DynamicServices({services}){
     return(
         <div className={styles.constructionBox}>
 
-            {/*<Head>*/}
-            {/*    <title>{services.service_title} - {services[replacedSlug].title}</title>*/}
-            {/*    <meta name="description" content={services.service_description} />*/}
-            {/*    <meta property="og:title" content={services.service_title} />*/}
-            {/*    <meta property="og:description" content={services.service_description} />*/}
-            {/*    <meta property="og:url" content={`https://www.semarim.ee/${router.query.slug}`} />*/}
-            {/*    <meta property="og:type" content="website" />*/}
-            {/*</Head>*/}
 
             <NextSeo {...seoData}/>
 
@@ -123,12 +115,6 @@ export async function getStaticPaths({ locales }) {
             paramsArray.push({params: { slug: slug }, locale: locale})
         })
     })
-
-    // console.log(paramsArray)
-
-
-    // const transformedArray = array.map(item => `/${item.locale}/${item.params.slug}`);
-    // console.log(transformedArray);
 
 
 
