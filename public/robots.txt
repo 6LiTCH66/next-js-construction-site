@@ -1,7 +1,9 @@
+# *
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://www.semarim.ee/api/sitemap.xml
+# Host
+Host: https://www.semarim.ee
 
-
-
+# Sitemaps
+Sitemap: https://www.semarim.ee/sitemap.xml
