@@ -1,7 +1,9 @@
 import styles from "@/styles/ContactPage.module.css"
 import stylesForm from "@/styles/ContactForm.module.css"
 import React, {useState} from "react";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import {NextSeo} from "next-seo";
 
 export default function Contact() {
@@ -15,12 +17,7 @@ export default function Contact() {
         openGraph: {
             title: t("contact.title"),
             description: t("contact.description"),
-            // images: [
-            //     {
-            //         url: 'https://example.com/terrace-construction.jpg', // Replace with the actual image URL
-            //         alt: 'Terrace Construction',
-            //     },
-            // ],
+
         },
     };
 
@@ -115,6 +112,14 @@ export default function Contact() {
             </div>
         </div>
     );
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common'])),
+        },
+    };
 }
 
 

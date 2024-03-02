@@ -6,20 +6,20 @@ import Link from "next/link"
 import styles from "@/styles/Footer.module.css"
 function Footer({footer_text}) {
     return (
-        <div className={styles.footerContainer}>
+        <footer className={styles.footerContainer}>
             <div className={styles.footerWrapper}>
                 <div className={styles.companyVision}>
-                    <span className={styles.companyName}>
+                    <h1 className={styles.companyName}>
                         Semarim
-                    </span>
-                    <span className={styles.companyText}>
+                    </h1>
+                    <h3 className={styles.companyText}>
                         {footer_text.company_text}
-                    </span>
+                    </h3>
                 </div>
                 <div className={styles.companyQuickLinks}>
-                    <span className={styles.quickLinksTitle}>
+                    <h5 className={styles.quickLinksTitle}>
                         {footer_text.quick_links}
-                    </span>
+                    </h5>
                     <ul className={styles.footerLinks}>
                         <li>
                             <Link href="/">{footer_text.home_link}</Link>
@@ -39,9 +39,9 @@ function Footer({footer_text}) {
                     </ul>
                 </div>
                 <div className={styles.companyContact}>
-                    <span className={styles.contactTitle}>
+                    <h5 className={styles.contactTitle}>
                         {footer_text.contacts}
-                    </span>
+                    </h5>
                     <ul className={styles.contactLinks}>
                         <li>
                             <Link href="mailto: info.semarim@gmail.com">
@@ -66,7 +66,7 @@ function Footer({footer_text}) {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 }
 

@@ -1,15 +1,4 @@
 const data = [
-    { params: { slug: '/terrace-construction' }, locale: 'ru' },
-    { params: { slug: '/canopy-construction' }, locale: 'ru' },
-    { params: { slug: '/pergola-construction' }, locale: 'ru' },
-    { params: { slug: '/extensions-construction' }, locale: 'ru' },
-    { params: { slug: '/woodsheds-construction' }, locale: 'ru' },
-    { params: { slug: '/warp-bed-construction' }, locale: 'ru' },
-    { params: { slug: '/floor-resurfacing' }, locale: 'ru' },
-    { params: { slug: '/renovation-of-wooden-facades' }, locale: 'ru' },
-    { params: { slug: '/maintenance-repair-terraces' }, locale: 'ru' },
-    { params: { slug: '/consultation' }, locale: 'ru' },
-
     { params: { slug: '/terrace-construction' }, locale: 'ee' },
     { params: { slug: '/canopy-construction' }, locale: 'ee' },
     { params: { slug: '/pergola-construction' }, locale: 'ee' },

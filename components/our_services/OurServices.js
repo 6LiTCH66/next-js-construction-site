@@ -7,14 +7,14 @@ import styles from "@/styles/OurService.module.css"
 
 export default function OurServices({our_services_object}){
     return (
-        <div className={styles.servicesContainer}>
+        <section className={styles.servicesContainer}>
             <div className={styles.servicesContentHeader}>
-                <span className={styles.servicesContentTitle}>
+                <h5 className={styles.servicesContentTitle}>
                     {our_services_object.title}
-                </span>
-                <span className={styles.servicesContentDescription}>
+                </h5>
+                <h4 className={styles.servicesContentDescription}>
                     {our_services_object.description}
-                </span>
+                </h4>
 
             </div>
             <div className={styles.servicesContentBody}>
@@ -31,12 +31,12 @@ export default function OurServices({our_services_object}){
                                }}/>
                     </div>
                     <div className={styles.servicesContentWrapperContent}>
-                        <span className={styles.servicesContentWrapperTitle}>
+                        <h6 className={styles.servicesContentWrapperTitle}>
                             {our_services_object.construction.title}
-                        </span>
-                        <span className={styles.servicesContentWrapperDescription}>
+                        </h6>
+                        <h6 className={styles.servicesContentWrapperDescription}>
                             {our_services_object.construction.description}
-                        </span>
+                        </h6>
                         <Link href="/terrace-construction" className={styles.servicesContentButton}>
                             {our_services_object.button_text}
                         </Link>
@@ -56,12 +56,12 @@ export default function OurServices({our_services_object}){
                         }}/>
                     </div>
                     <div className={styles.servicesContentWrapperContent}>
-                        <span className={styles.servicesContentWrapperTitle}>
+                        <h6 className={styles.servicesContentWrapperTitle}>
                             {our_services_object.repair.title}
-                        </span>
-                        <span className={styles.servicesContentWrapperDescription}>
+                        </h6>
+                        <h6 className={styles.servicesContentWrapperDescription}>
                             {our_services_object.repair.description}
-                        </span>
+                        </h6>
                         <Link href="floor-resurfacing" className={styles.servicesContentButton}>
                             {our_services_object.button_text}
                         </Link>
@@ -80,21 +80,18 @@ export default function OurServices({our_services_object}){
                         }}/>
                     </div>
                     <div className={styles.servicesContentWrapperContent}>
-                        <span className={styles.servicesContentWrapperTitle}>
+                        <h6 className={styles.servicesContentWrapperTitle}>
                             {our_services_object.consultation.title}
-                        </span>
-                        <span className={styles.servicesContentWrapperDescription}>
+                        </h6>
+                        <h6 className={styles.servicesContentWrapperDescription}>
                             {our_services_object.consultation.description}
-                        </span>
+                        </h6>
                         <Link href="consultation" className={styles.servicesContentButton}>
                             {our_services_object.button_text}
                         </Link>
                     </div>
                 </div>
-
-
-
             </div>
-        </div>
+        </section>
     )
 }

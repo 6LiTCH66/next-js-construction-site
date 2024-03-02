@@ -2,12 +2,13 @@ import styles from "@/styles/DynamicServices.module.css"
 import ContactForm from "../../components/contact_form/ContactForm";
 import Link from "next/link"
 import {useRouter} from "next/router";
-import useTranslation from "next-translate/useTranslation";
-import getT from "next-translate/getT";
-import Head from 'next/head'
 import {NextSeo} from "next-seo";
 
-export default function DynamicServices({services}){
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+
+export default function DynamicServices({services, locale}){
     const {t} = useTranslation("common");
     const router = useRouter();
     const replacedSlug = router.query.slug.replaceAll("-", "_")
@@ -15,45 +16,37 @@ export default function DynamicServices({services}){
     const seoData = {
         title: services[replacedSlug].title,
         description: services[replacedSlug].content.content_description,
+        canonical: `https://www.semarim.ee/${locale}`,
         openGraph: {
             title: services[replacedSlug].title,
             description: services[replacedSlug].content.content_description,
-            // images: [
-            //     {
-            //         url: 'https://example.com/terrace-construction.jpg', // Replace with the actual image URL
-            //         alt: 'Terrace Construction',
-            //     },
-            // ],
+            url: `https://www.semarim.ee/${locale}`
+
         },
     };
 
-
     return(
-        <div className={styles.constructionBox}>
-
-
+        <>
             <NextSeo {...seoData}/>
-
-            <div className={styles.constructionHeader}>
+            <header className={styles.constructionHeader}>
                 <div className={styles.constructionHeaderWrapper}>
-                    <p className={styles.constructionHeaderTitle}>
+                    <h1 className={styles.constructionHeaderTitle}>
                         {services.service_title}
-                    </p>
+                    </h1>
                     <hr/>
-                    <p className={styles.constructionHeaderDescription}>
+                    <h4 className={styles.constructionHeaderDescription}>
                         {services.service_description}
-                    </p>
+                    </h4>
                 </div>
-
-            </div>
+            </header>
 
             <div className={styles.constructionContainer}>
                 <div className={styles.constructionWrapper}>
-                    <div className={styles.workTypesContainer}>
-                        <p className={styles.workTypesTitle}>
+                    <aside className={styles.workTypesContainer}>
+                        <h5 className={styles.workTypesTitle}>
 
                             {services.type_of_work_title}
-                        </p>
+                        </h5>
                         <ul className={styles.workTypes}>
 
                             {services.type_of_work_links.map((link, id) =>{
@@ -66,30 +59,29 @@ export default function DynamicServices({services}){
                                 )
                             })}
                         </ul>
-                    </div>
+                    </aside>
 
                     <div className={styles.workInfoContainer}>
-                        <p className={styles.workInfoTitle}>
+                        <h1 className={styles.workInfoTitle}>
                             {services[replacedSlug].title}
-                        </p>
+                        </h1>
 
-                        <p className={styles.workInfoText}>
-
+                        <h6 className={styles.workInfoText}>
                             {services[replacedSlug].content.cost_title}
-                        </p>
+                        </h6>
                         <ul>
                             <li className={styles.workInfoText}>
                                 {services[replacedSlug].content.cost_description}
                             </li>
                         </ul>
-                        <p className={styles.workInfoText} id={styles.workDescription}>
+                        <h5 className={styles.workInfoText} id={styles.workDescription}>
                             {services[replacedSlug].content.content_description}
-                        </p>
-                        <ContactForm contact_object={t("contact_form", {}, {returnObjects: true})} display_select_menu={false}/>
+                        </h5>
+                        <ContactForm contact_object={t("contact_form", {returnObjects: true})} display_select_menu={false}/>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
@@ -115,8 +107,6 @@ export async function getStaticPaths({ locales }) {
             paramsArray.push({params: { slug: slug }, locale: locale})
         })
     })
-
-
 
     return {
         paths: paramsArray,
@@ -157,8 +147,15 @@ function getServicesType(pagePath){
 
 export const getStaticProps = async ({ locale, params }) => {
     const pagePath = params.slug;
-    const serviceType = getServicesType(pagePath)
+    const serviceType = getServicesType(pagePath);
+    const services = {...(await serverSideTranslations(locale, ['common']))._nextI18Next.initialI18nStore[locale].common.services[serviceType]}
 
-    const t = await getT(locale, 'common')
-    return { props: { services: t(`services.${serviceType}`, {}, {returnObjects: true}) } }
-}
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common'])),
+            services: services,
+            locale: `${locale === "ru" ? "" : `${locale}/`}${pagePath}`
+        }
+    };
+};
+

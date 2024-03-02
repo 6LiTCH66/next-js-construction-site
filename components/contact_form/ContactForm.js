@@ -28,7 +28,7 @@ function ContactForm({contact_object, display_select_menu}) {
     }
 
     return (
-        <div className={styles.contactContainer}>
+        <section className={styles.contactContainer}>
             <div className={styles.contactWrapper}>
                 <p className={styles.contactInfo}>
                     <i>
@@ -86,7 +86,7 @@ function ContactForm({contact_object, display_select_menu}) {
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

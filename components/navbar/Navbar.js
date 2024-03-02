@@ -5,7 +5,7 @@ import {IoIosConstruct} from "react-icons/io"
 
 export default function Navbar({navbar_text}) {
     return (
-        <div className={styles.navbarBox}>
+        <nav className={styles.navbarBox}>
             <div className={styles.navbarContainer}>
 
                 <div className={styles.navbarLogo}>
@@ -24,6 +24,6 @@ export default function Navbar({navbar_text}) {
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>
     );
 }

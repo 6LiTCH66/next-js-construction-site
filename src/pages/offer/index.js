@@ -1,7 +1,8 @@
 import styles from "@/styles/Offer.module.css"
 import ContactForm from "../../../components/contact_form/ContactForm";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from 'next-i18next';
 import {NextSeo} from "next-seo";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 export default function Offer(props) {
     const {t} = useTranslation("common")
@@ -13,12 +14,7 @@ export default function Offer(props) {
         openGraph: {
             title: t("offer.title"),
             description: t("contact_form.contact_info"),
-            // images: [
-            //     {
-            //         url: 'https://example.com/terrace-construction.jpg', // Replace with the actual image URL
-            //         alt: 'Terrace Construction',
-            //     },
-            // ],
+
         },
     };
 
@@ -37,12 +33,20 @@ export default function Offer(props) {
             </div>
             <div className={styles.offerContainer}>
                 <div className={styles.offerWrapper}>
-                    <ContactForm contact_object={t("contact_form", {}, {returnObjects: true})} display_select_menu={true}/>
+                    <ContactForm contact_object={t("contact_form", {returnObjects: true})} display_select_menu={true}/>
                 </div>
 
             </div>
 
         </div>
     );
+}
+
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common'])),
+        },
+    };
 }
 

@@ -1,7 +1,7 @@
-{
-    "locales": ["ru", "ee"],
-    "defaultLocale": "ru",
-    "pages": {
-        "*": ["common"]
-    }
-}
+//{
+//    "locales": ["ru", "ee"],
+//    "defaultLocale": "ru",
+//    "pages": {
+//        "*": ["common"]
+//    }
+//}

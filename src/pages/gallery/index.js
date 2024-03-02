@@ -3,8 +3,9 @@ import Image from "next/image"
 import fetchAllImages from "../../../utils/getImages"
 import styles from "@/styles/Projects.module.css";
 import someImage from "../../../public/assets/consultation.jpg"
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from 'next-i18next';
 import {NextSeo} from "next-seo";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
 export default function Gallery(){
     const [images, setImages] = useState([])
@@ -13,8 +14,8 @@ export default function Gallery(){
 
     const {t} = useTranslation("common")
 
-    const gallery_title = t("navbar.gallery", {}, {returnObjects: true})
-    const gallery_desc = t("gallery.title", {}, {returnObjects: true})
+    const gallery_title = t("navbar.gallery", {returnObjects: true})
+    const gallery_desc = t("gallery.title", {returnObjects: true})
 
     const seoData = {
         title: gallery_title,
@@ -22,12 +23,7 @@ export default function Gallery(){
         openGraph: {
             title: gallery_title,
             description: gallery_desc,
-            // images: [
-            //     {
-            //         url: 'https://example.com/terrace-construction.jpg', // Replace with the actual image URL
-            //         alt: 'Terrace Construction',
-            //     },
-            // ],
+
         },
     };
 
@@ -67,4 +63,11 @@ export default function Gallery(){
         </>
 
     )
+}
+export async function getStaticProps({ locale }) {
+    return {
+        props: {
+            ...(await serverSideTranslations(locale, ['common'])),
+        },
+    };
 }

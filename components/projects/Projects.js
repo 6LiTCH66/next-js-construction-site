@@ -14,11 +14,11 @@ function Projects({project_title, projects_button}) {
     }, [])
 
     return (
-        <div className={styles.projectsContainer}>
+        <section className={styles.projectsContainer}>
             <div className={styles.projectsContainerText}>
-                <span className={styles.projectsTitle}>
+                <h6 className={styles.projectsTitle}>
                     {project_title}
-                </span>
+                </h6>
             </div>
             <div className={styles.projectsImageContainer}>
                 {images.slice(0, 6).map((image, key) => (
@@ -29,7 +29,7 @@ function Projects({project_title, projects_button}) {
             </div>
             <Link href="/gallery" className={styles.projectsButton}>{projects_button}</Link>
 
-        </div>
+        </section>
     );
 }
 
