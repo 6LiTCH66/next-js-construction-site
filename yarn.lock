@@ -1432,7 +1432,7 @@
   "resolved" "https://registry.npmjs.org/i18next-fs-backend/-/i18next-fs-backend-2.3.1.tgz"
   "version" "2.3.1"
 
-"i18next@>= 23.2.3", "i18next@>= 23.7.13":
+"i18next@^23.10.0", "i18next@>= 23.2.3", "i18next@>= 23.7.13":
   "integrity" "sha512-/TgHOqsa7/9abUKJjdPeydoyDc0oTi/7u9F8lMSj6ufg4cbC1Oj3f/Jja7zj7WRIhEQKB7Q4eN6y68I9RDxxGQ=="
   "resolved" "https://registry.npmjs.org/i18next/-/i18next-23.10.0.tgz"
   "version" "23.10.0"
