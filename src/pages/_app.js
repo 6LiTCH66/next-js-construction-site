@@ -2,6 +2,8 @@ import '@/styles/globals.css'
 import Layout from "../../components/layout";
 import { useTranslation } from 'next-i18next';
 import {Analytics} from "@vercel/analytics/react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import Head from "next/head"
 
 import { appWithTranslation } from 'next-i18next'
@@ -19,6 +21,7 @@ function App({ Component, pageProps }) {
           </Head>
         <Component {...pageProps} />
           <Analytics/>
+          <SpeedInsights />
       </Layout>
   )
 }

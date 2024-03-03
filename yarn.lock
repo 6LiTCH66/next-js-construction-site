@@ -390,6 +390,11 @@
   "resolved" "https://registry.npmjs.org/@vercel/analytics/-/analytics-1.0.1.tgz"
   "version" "1.0.1"
 
+"@vercel/speed-insights@^1.0.10":
+  "integrity" "sha512-4uzdKB0RW6Ff2FkzshzjZ+RlJfLPxgm/00i0XXgxfMPhwnnsk92YgtqsxT9OcPLdJUyVU1DqFlSWWjIQMPkh0g=="
+  "resolved" "https://registry.npmjs.org/@vercel/speed-insights/-/speed-insights-1.0.10.tgz"
+  "version" "1.0.10"
+
 "acorn-jsx@^5.3.2":
   "integrity" "sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ=="
   "resolved" "https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.3.2.tgz"
@@ -1876,7 +1881,7 @@
   "resolved" "https://registry.npmjs.org/next-translate/-/next-translate-2.0.6.tgz"
   "version" "2.0.6"
 
-"next@*", "next@^8.1.1-canary.54 || >=9.0.0", "next@>= 10.0.0", "next@>= 12.0.0", "next@13.1.6":
+"next@*", "next@^8.1.1-canary.54 || >=9.0.0", "next@>= 10.0.0", "next@>= 12.0.0", "next@>= 13", "next@13.1.6":
   "integrity" "sha512-hHlbhKPj9pW+Cymvfzc15lvhaOZ54l+8sXDXJWm3OBNBzgrVj6hwGPmqqsXg40xO1Leq+kXpllzRPuncpC0Phw=="
   "resolved" "https://registry.npmjs.org/next/-/next-13.1.6.tgz"
   "version" "13.1.6"
@@ -2161,7 +2166,7 @@
   "resolved" "https://registry.npmjs.org/react-modal-image/-/react-modal-image-2.6.0.tgz"
   "version" "2.6.0"
 
-"react@*", "react@^18.2.0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>= 17.0.2", "react@>=16", "react@>=16.0.0", "react@18.2.0":
+"react@*", "react@^18 || ^19", "react@^18.2.0", "react@>= 16.8.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>= 17.0.2", "react@>=16", "react@>=16.0.0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
