@@ -7,8 +7,7 @@ import { useTranslation } from 'next-i18next';
 import {NextSeo} from "next-seo";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
-export default function Gallery(){
-    const [images, setImages] = useState([])
+export default function Gallery({images}){
     const [imageId, setImageId] = useState()
     const [openModal, setOpenModal] = useState(false)
 
@@ -27,12 +26,6 @@ export default function Gallery(){
         },
     };
 
-    useEffect(() => {
-        const images = fetchAllImages()
-
-        setImages(images)
-    }, []);
-
     const getImageId = (imageId) =>{
         setImageId(imageId)
         setOpenModal(true)
@@ -50,7 +43,7 @@ export default function Gallery(){
                 <div className={styles.projectsImageContainer}>
                     {images.map((image, key) => (
                         <div className={styles.imageWrapper} key={key}>
-                            <Image src={image} alt="image" className={styles.projectsImage} onClick={() => getImageId(key)}/>
+                            <Image src={image} loading="eager" alt="image" className={styles.projectsImage} onClick={() => getImageId(key)}/>
                         </div>
                     ))}
                 </div>
@@ -65,9 +58,12 @@ export default function Gallery(){
     )
 }
 export async function getStaticProps({ locale }) {
+    const images = fetchAllImages();
+    const imagesJSON = JSON.stringify(images)
     return {
         props: {
             ...(await serverSideTranslations(locale, ['common'])),
+            images: JSON.parse(imagesJSON)
         },
     };
 }

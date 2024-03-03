@@ -21,7 +21,7 @@ function Header({header_title, header_description, header_button}) {
 
                 </div>
                 <div className={styles.headerImage}>
-                    <Image src={header_image} alt="Header image" layout="responsive"/>
+                    <Image src={header_image} priority={true} alt="Header image" layout="responsive"/>
                 </div>
             </div>
         </header>
