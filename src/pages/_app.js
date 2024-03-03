@@ -2,7 +2,7 @@ import '@/styles/globals.css'
 import Layout from "../../components/layout";
 import { useTranslation } from 'next-i18next';
 import {Analytics} from "@vercel/analytics/react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import Head from "next/head"
 
