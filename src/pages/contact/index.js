@@ -42,6 +42,7 @@ export default function Contact() {
     return (
         <div className={styles.contactUsBox}>
             <NextSeo {...seoData}/>
+
             <div className={styles.contactUsHeader}>
                 <div className={styles.contactUsHeaderWrapper}>
                     <p className={styles.contactUsTitle}>{t("contact.title")}</p>
@@ -51,6 +52,7 @@ export default function Contact() {
                     </p>
                 </div>
             </div>
+
             <div className={styles.contactUsContainer}>
                 <div className={styles.contactUsWrapper}>
                     <div className={styles.contactUsForm}>

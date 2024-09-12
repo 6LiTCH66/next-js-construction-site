@@ -1,0 +1,99 @@
+.aboutUsContainer{
+    display: flex;
+    justify-content: center;
+    padding: 0 8rem;
+}
+
+.aboutUsWrapper{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0;
+}
+
+
+.aboutUsHeader{
+    background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("../../public/assets/hero-background.jpg") no-repeat;
+    padding: 3.75rem 8rem;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.aboutUsHeaderWrapper{
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    min-height: 156px;
+}
+
+.aboutUsTitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+.aboutUsDescription{
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    color: #FFFFFF;
+    height: 100%;
+    min-height: 75px;
+}
+
+.aboutUsVideoContainer{
+    display: flex;
+    /*flex-direction: column-reverse;*/
+    background-color: var(--color-bg);
+}
+.videoPlayerText{
+    flex: 1;
+}
+
+.videoPlayerText ul li{
+    margin-bottom: 1rem;
+}
+.videoPlayerText ul li:last-child{
+    margin-bottom: 0;
+}
+
+.videoPlayerText h3, .videoPlayerText ul{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 1rem;
+}
+.videoPlayerText ul{
+    padding: 1rem;
+}
+
+
+@media screen and (max-width: 768px){
+    .aboutUsVideoContainer{
+        flex-direction: column!important;
+    }
+    .aboutUsContainer, .aboutUsHeader{
+        padding: 1rem;
+    }
+    .aboutUsContainer{
+        justify-content: flex-start;
+    }
+    .aboutUsWrapper{
+        flex-direction: column;
+        margin: 0;
+    }
+    .aboutUsInfoTitle{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+        font-size: 16px;
+    }
+    .aboutUsInfo{
+        margin-top: 2rem;
+    }
+}

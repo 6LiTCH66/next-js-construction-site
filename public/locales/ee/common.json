@@ -8,7 +8,8 @@
   "gallery": "Galerii",
   "price": "Hind",
   "contacts": "Kontakt",
-  "offer": "Küsi pakkumine"
+  "offer": "Küsi pakkumine",
+    "about": "Meist"
   },
   "footer": {
     "company_text": "Kas sul on idee? Võtke meiega ühendust ja räägime asjast.",
@@ -70,6 +71,58 @@
     "email": "Email:",
     "telephone": "Telefon:",
     "info_title": "Meiega saate ühendust võtta helistades või saates sõnumi."
+  },
+  "about": {
+    "title": "Meist",
+    "description": "Semarim - professionaalidest koosnev meeskond, kes teostab teie ideed terrasside, kuuride ja aiamajade ehitamiseks.",
+
+    "videoText1": "Semarim OÜ on professionaalidest koosnev meeskond, kes on valmis realiseerima teie unistused mugavast ja funktsionaalsest hoovist.",
+    "videoText2": "Pakume laias valikus teenuseid puitkonstruktsioonide ehitamiseks: terrassid, kuurid, pergolad, kõrvalhooned, kuurid ja aiatehnikamajad.",
+    "videoText3": "Meie eesmärk on luua hubaseid ja kvaliteetseid struktuure, mis rõõmustavad teid aastaid.",
+
+
+    "whoWeAreTitle": "Kes me oleme?",
+    "whyClientChooseUsTitle": "Miks kliendid meid usaldavad?",
+    "whyChooseUsTitle": "Miks valida meid?",
+    "ourServicesTitle": "Meie teenused:",
+
+
+    "experience": {
+      "title": "Kogemus ja professionaalsus:",
+      "description": "Meie meeskond koosneb kogenud spetsialistidest, kes tunnevad puitkonstruktsioonide üksikasju."
+    },
+    "individualApproach": {
+      "title": "Isikupärastatud lähenemine:",
+      "description": "Võtame arvesse kõiki kliendi soove ja loome igale objektile ideaalselt sobiva kujunduse."
+    },
+    "highQuality": {
+      "title": "Kõrge kvaliteet:",
+      "description": "Kasutame ainult kvaliteetseid materjale ja kaasaegseid tehnoloogiaid, et teie hooned teeniksid aastaid."
+    },
+
+
+
+    "terracesAndCanopies": {
+      "title": "Terrasside ja varjualuste ehitamine:",
+      "description": "Looge täiuslik koht, kus saab õues lõõgastuda."
+    },
+
+    "pergolasAndExtensions": {
+      "title": "Perglad ja välikäimlad:",
+      "description": "Kaunistage oma aeda ja laiendage oma kasutatavat ruumi."
+    },
+
+    "woodshedsAndSheds": {
+      "title": "Puukuuride ja kuuride:",
+      "description": "Pakkuge mugavat hoiukohta küttepuude ja aiatööriistade jaoks."
+    },
+
+    "warmBeds": {
+      "title": "Soe peenra:",
+      "description": "Suurendage oma aia saagikust kaasaegsete lahendustega."
+    }
+
+
   },
   "offer": {
     "title": "Küsi pakkumine"

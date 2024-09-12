@@ -54,7 +54,8 @@ export default function RightNavbar(props) {
                 </Link>
                 <ul className={styles.nav__listitemdrop}>
                     <li>
-                        <Link href="/terrace-construction" onClick={props.onClick}>{props.navbar_text.construction}</Link>
+                        <Link href="/terrace-construction"
+                              onClick={props.onClick}>{props.navbar_text.construction}</Link>
                     </li>
                     <li>
                         <Link href="/floor-resurfacing" onClick={props.onClick}>{props.navbar_text.repair}</Link>
@@ -67,7 +68,7 @@ export default function RightNavbar(props) {
             </li>
             <li className={styles.nav__listitem}>
                 <Link href="/gallery" onClick={props.onClick}>{props.navbar_text.gallery}</Link>
-            </li >
+            </li>
 
             {/*<li className={styles.nav__listitem}>*/}
             {/*    <Link href="components#price">{props.navbar_text.price}</Link>*/}
@@ -76,6 +77,9 @@ export default function RightNavbar(props) {
             <li className={styles.nav__listitem}>
                 <Link href="/contact" onClick={props.onClick}>{props.navbar_text.contacts}</Link>
             </li>
+            <li className={styles.nav__listitem}>
+                <Link href="/about" onClick={props.onClick}>{props.navbar_text.about}</Link>
+            </li>
 
             <div className={styles.linkButton}>
                 <Link href="/offer" onClick={props.onClick}>{props.navbar_text.offer}</Link>
@@ -83,11 +87,11 @@ export default function RightNavbar(props) {
 
             <li className={`${styles.dropdown} ${styles.nav__listitem} ${styles.language}`}>
                 {otherLocales?.map((locale) => {
-                    const { pathname, query, asPath } = router;
+                    const {pathname, query, asPath} = router;
 
-                    return(
+                    return (
                         <span key={"locale-" + locale}>
-                            <Link href={{ pathname, query }} as={asPath} locale={locale}>
+                            <Link href={{pathname, query}} as={asPath} locale={locale}>
 
                                     {locale === "ru" ? "Русский" : locale === "ee" ? "Eesti" : null}
                             </Link>

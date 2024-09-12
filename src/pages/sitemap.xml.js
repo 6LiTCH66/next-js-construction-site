@@ -9,6 +9,7 @@ const data = [
     { params: { slug: '/renovation-of-wooden-facades' }, locale: 'ee' },
     { params: { slug: '/maintenance-repair-terraces' }, locale: 'ee' },
     { params: { slug: '/consultation' }, locale: 'ee' },
+    { params: { slug: '/about' }, locale: 'ee' },
 
     { params: { slug: 'terrace-construction' }, locale: '' },
     { params: { slug: 'canopy-construction' }, locale: '' },
@@ -20,6 +21,7 @@ const data = [
     { params: { slug: 'renovation-of-wooden-facades' }, locale: '' },
     { params: { slug: 'maintenance-repair-terraces' }, locale: '' },
     { params: { slug: 'consultation' }, locale: '' },
+    { params: { slug: 'about' }, locale: '' },
 
 ];
 

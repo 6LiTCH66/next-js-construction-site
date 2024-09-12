@@ -40,6 +40,7 @@ const StyledBurger = styled.div`
 
 
 export default function Burger({navbar_text}) {
+
     const [open, setOpen] = useState(false)
 
     const handleLinkClick = () => {
