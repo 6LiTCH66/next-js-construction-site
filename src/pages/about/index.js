@@ -41,7 +41,7 @@ export default function About(){
                         <h1>{t("about.whoWeAreTitle")}</h1>
                     </div>
                     <div className={styles.aboutUsVideoContainer}>
-                        <VideoPlayer filename={"Semarim1.mp4"}/>
+                        <VideoPlayer filename={"Semarim1_final.mp4"}/>
                         <div className={styles.videoPlayerText}>
                             <h3>{t("about.videoText1")}
                                 <br/>
@@ -74,7 +74,7 @@ export default function About(){
                         <div className={styles.videoPlayerText}>
                             <b>{t("about.ourServicesTitle")}</b>
                             <ul>
-                                <li><b>{t("about.terracesAndCanopies.title")}</b> {t("about.highQuality.description")}
+                                <li><b>{t("about.terracesAndCanopies.title")}</b> {t("about.terracesAndCanopies.description")}
                                 </li>
                                 <li><b>{t("about.pergolasAndExtensions.title")}</b> {t("about.pergolasAndExtensions.description")}
                                 </li>
